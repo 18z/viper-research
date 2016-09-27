@@ -6,7 +6,7 @@
 |   2   | [46a2a](https://github.com/viper-framework/viper/tree/46a2a) | First commit        | [link](https://github.com/18z/viper-trace)        |
 |   3   | [db25c](https://github.com/viper-framework/viper/tree/db25c) | Added .gitignore    | [link](https://twitter.com/xspiritualx1/status/780746560250314752?lang=zh-tw)        |
 |   4   | [6f2d2](https://github.com/viper-framework/viper/tree/6f2d2) | Started README file | [link](https://twitter.com/xspiritualx1/status/780747627080011776?lang=zh-tw)        |
-|   5   | [f3682](https://github.com/viper-framework/viper/tree/f3682) | Fixed typo          | [link]()        |
+|   5   | [f3682](https://github.com/viper-framework/viper/tree/f3682) | Fixed typo          | [link](https://twitter.com/xspiritualx1/status/780748527630553089?lang=zh-tw)        |
 
 ### 46a2a
 
