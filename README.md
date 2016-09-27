@@ -8,7 +8,7 @@
 |   4   | 6f2d2 | Started README file |         |
 |   5   | f3682 | Fixed typo          |         |
 
-46a2a 
+### 46a2a
 
-    1. 46a2a 依據原本 viper 程式結構 rewrite 一版。
+    1. 依據原本 viper 程式結構 rewrite 一版。
     2. module-description 要加上每一隻程式的邏輯解說。
