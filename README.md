@@ -6,7 +6,7 @@
 |   2   | [46a2a](https://github.com/viper-framework/viper/tree/46a2a) | First commit        | [此 commit 可出現程式架構與部分功能。](https://github.com/18z/viper-trace)        |
 |   3   | [db25c](https://github.com/viper-framework/viper/tree/db25c) | Added .gitignore    | 新增 .gitignore 檔案        |
 |   4   | [6f2d2](https://github.com/viper-framework/viper/tree/6f2d2) | Started README file | 在 README.md 上撰寫軟體概念以及使用範例。        |
-|   5   | [f3682](https://github.com/viper-framework/viper/tree/f3682) | Fixed typo          | [link](https://twitter.com/xspiritualx1/status/780748527630553089?lang=zh-tw)        |
+|   5   | [f3682](https://github.com/viper-framework/viper/tree/f3682) | Fixed typo          | 修正 plugins.py 註解中錯字。        |
 
 ### 46a2a
 
