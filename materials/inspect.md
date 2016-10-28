@@ -8,7 +8,7 @@
 
 #### 檢查 sys 模組
 
-使用 inspect.getsourcefile(sys) 檢查結果：
+使用 inspect.getsourcefile(sys) [1] 檢查結果：
 
 ```
 Traceback (most recent call last):
@@ -21,9 +21,9 @@ Traceback (most recent call last):
 TypeError: <module 'sys' (built-in)> is a built-in module
 ```
 
-出現 TypeError: <module 'sys' (built-in)> is a built-in module。
+出現 ```TypeError: <module 'sys' (built-in)> is a built-in module。```
 
-出現 TypeError 可能原因為：
+出現 TypeError 可能原因為 [2]：
 
 ```
 At best, you could use the inspect module to try and find some indicators, 
@@ -43,3 +43,8 @@ as any C extension module will do the same thing.
 ```
 /home/user/.pyenv/versions/2.7.6/lib/python2.7/os.py
 ```
+
+參考文獻：
+
+[1] https://docs.python.org/3/library/inspect.html#inspect.getsourcefile
+[2] http://stackoverflow.com/questions/12854442/python-how-to-check-if-an-imported-module-package-class-is-from-standard-librar
