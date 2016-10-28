@@ -47,4 +47,5 @@ as any C extension module will do the same thing.
 參考文獻：
 
 [1] https://docs.python.org/3/library/inspect.html#inspect.getsourcefile
+
 [2] http://stackoverflow.com/questions/12854442/python-how-to-check-if-an-imported-module-package-class-is-from-standard-librar
