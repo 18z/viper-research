@@ -43,3 +43,7 @@
 #### database.py + (objects.py + out.py) + colors.py
 * 在資料庫中操作時(儲存、尋找、刪除檔案)時，需要 objects.py 提供相關資訊以操作。
 * objects.py 中同時定義了 Singleton 模式，供 Database 類別繼承，保證一個類別只能有一個 instance。
+
+#### storage.py
+* 檔案儲存前，將儲存路徑給定義好。
+* 取得已儲存檔案之路徑。
