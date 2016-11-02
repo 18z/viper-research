@@ -22,3 +22,13 @@
 #### abstracts.py + colors.py
 
 * 只看到 abstracts.py 中 import colors。但未看到使用 colors 中功能。
+
+#### objects.py
+
+#### session.py
+
+#### session.py + (objects.py + out.py) + colors.py
+
+#### database.py
+
+#### database.py + (objects.py + out.py) + colors.py
