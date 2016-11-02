@@ -25,7 +25,13 @@
 
 #### objects.py
 
+* 負責計算與提供檔案基本資訊，例如：檔案類型，sha256 hash value 等。
+
 #### session.py
+
+* 定義工作階段之基因。
+* 工作階段，每個不同檔案被分析時，各是一個工作階段。
+* 每個檔案被分析時，就會開啟 session，並將檔案相關資訊 (file type, hash value etc.) 載入。
 
 #### session.py + (objects.py + out.py) + colors.py
 
