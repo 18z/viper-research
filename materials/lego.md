@@ -31,9 +31,11 @@
 
 * 定義工作階段之基因。
 * 工作階段，每個不同檔案被分析時，各是一個工作階段。
-* 每個檔案被分析時，就會開啟 session，並將檔案相關資訊 (file type, hash value etc.) 載入。
+* 每個檔案被分析時，就會開啟 session，並將檔案相關資訊 (file type, hash value, file path etc.) 載入。
 
 #### session.py + (objects.py + out.py) + colors.py
+* 初次分析檔案時，會開啟 session，並將檔案相關資訊 (file type, hash value, file path etc.) 載入。
+* 使用模組分析檔案之前，都會使用 session.is_set() 檢查現在是否有 session 開啟。若有開啟，則表示檔案相關資訊有載入，可利用。 
 
 #### database.py
 
