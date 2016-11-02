@@ -13,3 +13,12 @@
 #### out.py + colors.py
 
 * 針對 viper 不同執行狀態，客製化相對應之輸出訊息與顏色。
+
+#### abstracts.py
+
+* 定義模組之基因。
+* 未來新增加之模組會繼承此基因，並依不同狀況修改。
+
+#### abstracts.py + colors.py
+
+* 只看到 abstracts.py 中 import colors。但未看到使用 colors 中功能。
