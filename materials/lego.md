@@ -38,5 +38,8 @@
 * 使用模組分析檔案之前，都會使用 session.is_set() 檢查現在是否有 session 開啟。若有開啟，則表示檔案相關資訊有載入，可利用。 
 
 #### database.py
+* 實作在資料庫中儲存、尋找及刪除檔案。
 
 #### database.py + (objects.py + out.py) + colors.py
+* 在資料庫中操作時(儲存、尋找、刪除檔案)時，需要 objects.py 提供相關資訊以操作。
+* objects.py 中同時定義了 Singleton 模式，供 Database 類別繼承，保證一個類別只能有一個 instance。
