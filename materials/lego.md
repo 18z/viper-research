@@ -47,3 +47,11 @@
 
 #### commands.py
 * 定義 viper 的系統指令。
+
+#### console.py
+* 模擬 bash console 介面。
+* 自訂 history file。
+* 可吃 viper 指令。指令前加上驚嘆號，則表示為 Linux 系統指令。
+
+#### viper.py
+* 啟動 viper console 介面。
