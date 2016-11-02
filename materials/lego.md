@@ -44,3 +44,6 @@
 #### plugins.py
 * 使用 pkgutil 模組，該模組提供實用 function 以支援 import 系統。
 * 使用 inspect 模組，針對所匯入之模組做一些基本檢查，例如：是否為 class 等。
+
+#### commands.py
+* 定義 viper 的系統指令。
