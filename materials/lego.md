@@ -1,0 +1,57 @@
+### Viper Lego
+
+#### colors.py
+* 客製化輸出訊息之顏色，讓 programmer 易操控輸出字串之顏色。
+
+#### out.py
+* viper 會依據不同執行狀態，印出相對應的客製化訊息。
+* 此程式客製化不同執行狀態 (info, warning, error, success) 輸出訊息。
+* 客製化表單。(以表單呈現 viper 之模組或指令)
+
+#### out.py + colors.py
+* 針對 viper 不同執行狀態，客製化相對應之輸出訊息與顏色。
+
+#### abstracts.py
+* 定義模組之基因。
+* 未來新增加之模組會繼承此基因，並依不同狀況修改。
+
+#### abstracts.py + colors.py
+* 只看到 abstracts.py 中 import colors。但未看到使用 colors 中功能。
+
+#### objects.py
+* 負責計算與提供檔案基本資訊，例如：檔案類型，sha256 hash value 等。
+
+#### session.py
+* 定義工作階段之基因。
+* 工作階段，每個不同檔案被分析時，各是一個工作階段。
+* 每個檔案被分析時，就會開啟 session，並將檔案相關資訊 (file type, hash value, file path etc.) 載入。
+
+#### session.py + (objects.py + out.py) + colors.py
+* 初次分析檔案時，會開啟 session，並將檔案相關資訊 (file type, hash value, file path etc.) 載入。
+* 使用模組分析檔案之前，都會使用 session.is_set() 檢查現在是否有 session 開啟。若有開啟，則表示檔案相關資訊有載入，可利用。 
+
+#### database.py
+* 實作在資料庫中儲存、尋找及刪除檔案。
+
+#### database.py + (objects.py + out.py) + colors.py
+* 在資料庫中操作時(儲存、尋找、刪除檔案)時，需要 objects.py 提供相關資訊以操作。
+* objects.py 中同時定義了 Singleton 模式，供 Database 類別繼承，保證一個類別只能有一個 instance。
+
+#### storage.py
+* 檔案儲存前，將儲存路徑給定義好。
+* 取得已儲存檔案之路徑。
+
+#### plugins.py
+* 使用 pkgutil 模組，該模組提供實用 function 以支援 import 系統。
+* 使用 inspect 模組，針對所匯入之模組做一些基本檢查，例如：是否為 class 等。
+
+#### commands.py
+* 定義 viper 的系統指令。
+
+#### console.py
+* 模擬 bash console 介面。
+* 自訂 history file。
+* 可吃 viper 指令。指令前加上驚嘆號，則表示為 Linux 系統指令。
+
+#### viper.py
+* 啟動 viper console 介面。
