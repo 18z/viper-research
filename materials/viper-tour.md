@@ -1,4 +1,6 @@
-### Viper tour
+### Viper tour 
+
+可參考 [Viper LEGO](https://github.com/18z/viper-research/blob/master/materials/lego.md)
 
 1. viper.py -> console.py -> colors.py
 
