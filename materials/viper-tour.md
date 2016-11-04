@@ -40,6 +40,10 @@
 
 6. viper.py -> console.py -> plugins.py -> module/fuzzy.py -> abstracts.py -> colors.py
 
+ ```
+ fuzzy.py 模組需要繼承 abstracts.py 中的基因。 
+ ```
+
 7. viper.py -> console.py -> plugins.py -> modules/fuzzy.py -> database.py -> out.py -> colors.py
 
 8. viper.py -> console.py -> plugins.py -> modules/fuzzy.py -> database.py -> objects.py
