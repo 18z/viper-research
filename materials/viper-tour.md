@@ -23,6 +23,11 @@
 
 4. viper.py -> console.py -> plugins.py -> abstracts.py -> colors.py
 
+ ```
+ console 介面會 listen 使用者輸入的指令，並檢查是否為內建 modules 指令。
+ modules loaded 前會檢查其是否為 abstracts.py 中 Module class 的孩子，且不是 Module class 本身。
+ ```
+
 5. viper.py -> console.py -> plugins.py -> module/fuzzy.py -> out.py -> colors.py
 
 6. viper.py -> console.py -> plugins.py -> module/fuzzy.py -> abstracts.py -> colors.py
