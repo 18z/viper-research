@@ -14,7 +14,12 @@
  另外，若輸入 $self 關鍵字時，則會用到函式 keywords 檢查是否有 session 開啟，並印出 __session__.file.path。 
  ```
 
-3. viper.py -> console.py -> objects.py
+3. viper.py -> console.py -> session.py -> objects.py
+
+ ```
+ 與 tour 2 相關，主要是 session.py 內用到了 objects.py 中的 File。
+ 其中，File 計算與提供檔案基本資訊，例如：檔案類型，sha256 hash value, file path 等。
+ ```
 
 4. viper.py -> console.py -> plugins.py -> abstracts.py -> colors.py
 
