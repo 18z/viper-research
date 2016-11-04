@@ -30,6 +30,14 @@
 
 5. viper.py -> console.py -> plugins.py -> module/fuzzy.py -> out.py -> colors.py
 
+ ```
+ 若 console 接到內建模組 fuzzy 指令，則會透過 plugins.py 載入 fuzzy 模組。
+ 用 dict 與 inspect 實作。 inspect 取得 module object。
+ plugins[member_object.cmd] = dict(obj=member_object, description=member_object.description)
+ 將相對應指令塞入 dict 的 key 值，並透過建立巢狀迴圈，將 obj=member_object。
+ 開發者就可透過 module = __modules__[root]['obj']() 初始化模組的 instance。
+ ```
+
 6. viper.py -> console.py -> plugins.py -> module/fuzzy.py -> abstracts.py -> colors.py
 
 7. viper.py -> console.py -> plugins.py -> modules/fuzzy.py -> database.py -> out.py -> colors.py
