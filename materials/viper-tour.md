@@ -9,6 +9,11 @@
  ```
 2. viper.py -> console.py -> session.py -> out.py -> colors.py
 
+ ```
+ 啟動 viper console 介面時，會先檢查是否有 session 正開啟中，若有則印出 __session__.file.path。
+ 另外，若輸入 $self 關鍵字時，則會用到函式 keywords 檢查是否有 session 開啟，並印出 __session__.file.path。 
+ ```
+
 3. viper.py -> console.py -> objects.py
 
 4. viper.py -> console.py -> plugins.py -> abstracts.py -> colors.py
