@@ -2,6 +2,8 @@
 
 1. viper.py -> console.py -> colors.py
 
+ 啟動 viper console 介面，console 介面顯示 prompt 時，會使用不同顏色顯示。
+
 2. viper.py -> console.py -> session.py -> out.py -> colors.py
 
 3. viper.py -> console.py -> objects.py
