@@ -236,9 +236,20 @@
  yarascan.py 掃描檔案前，需透過 storage 中的 get_sample_path 取得已儲存檔案之路徑。
  ```
 
-31. viper.py console.py commands.py out.py colors.py
+31. viper.py -> console.py -> commands.py -> out.py -> colors.py
 
-32. viper.py console.py commands.py colors.py
+ ```
+ 啟動 viper console 介面，console 會 import commands.py 中定義的 viper 系統指令。
+ 其中，輸入指令後，針對 viper 不同執行狀態，印出客製化相對應之輸出訊息與顏色。
+ ```
+
+32. viper.py -> console.py -> commands.py -> colors.py
+
+ ```
+ 同上，
+ 但輸入指令後，有些 output 訊息不一定會用到 out.py 的格式。
+ 所以直接用 colors.py 中的顏色顯示輸出。
+ ```
 
 33. viper.py console.py commands.py session.py out.py colors.py
 
