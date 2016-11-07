@@ -222,7 +222,13 @@
  2. 利用 __session__.file.path 取得檔案路徑。
  ```
 
-29. viper.py console.py plugins.py modules/yarascan.py session.py objects.py
+29. viper.py -> console.py -> plugins.py -> modules/yarascan.py -> session.py -> objects.py
+
+ ```
+ 此處 session.py 中 objects.py 沒被用到。
+ objects.py 用來負責計算與提供，正被分析檔案的基本資訊，例如：檔案類型，sha256 hash value 等。
+ 而此事，早在 session 一打開時就計算完畢了
+ ```
  
 30. viper.py console.py plugins.py modules/yarascan.py storage.py 
 
