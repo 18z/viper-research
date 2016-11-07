@@ -212,10 +212,15 @@
  或是
  objects.py 中同時定義了 Singleton 模式，供 Database 類別繼承，保證一個類別只能有一個 instance。
  但此處 yarascan.py 沒用到任何一種功能。
-
  ```
 
-28. viper.py console.py plugins.py modules/yarascan.py session.py out.py colors.py
+28. viper.py -> console.py -> plugins.py -> modules/yarascan.py -> session.py -> out.py -> colors.py
+
+ ```
+ virustotal.py 用 session.py 來檢查三件事。
+ 1. __session__.is.set() 檢查 session 是否開啟。
+ 2. 利用 __session__.file.path 取得檔案路徑。
+ ```
 
 29. viper.py console.py plugins.py modules/yarascan.py session.py objects.py
  
