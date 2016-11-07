@@ -107,7 +107,13 @@
  3. 將 PE file 中的 resource dump (圖片等資訊) 出來且指定 dump 到特定資料夾時會用到。
  ```
 
-15. viper.py console.py plugins.py modules/pe.py session.py objects.py
+15. viper.py -> console.py -> plugins.py -> modules/pe.py -> session.py -> objects.py
+
+ ```
+ 此處 session.py 中 objects.py 沒被用到。
+ objects.py 用來負責計算與提供，正被分析檔案的基本資訊，例如：檔案類型，sha256 hash value 等。
+ 而此事，早在 session 一打開時就計算完畢了。
+ ```
 
 16. viper.py console.py plugins.py modules/strings.py out.py colors.py
 
