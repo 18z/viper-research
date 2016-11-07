@@ -262,7 +262,12 @@
  5. 刪除檔案，以及刪除 db 中檔案資訊時，會先檢查 session 是否 open。
  ```
 
-34. viper.py console.py commands.py session.py objects.py
+34. viper.py -> console.py -> commands.py -> session.py -> objects.py
+
+ ```
+ 基本同上，
+ 在 open session 時，會先用 objects.py 中的 File 計算檔案 hash。  
+ ```
 
 35. viper.py console.py commands.py plugins.py abstracts.py colors.py
 
