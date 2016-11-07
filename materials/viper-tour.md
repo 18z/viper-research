@@ -92,7 +92,11 @@
  此處 objects.py 中 File 沒被用到。
  ```
 
-13. viper.py console.py plugins.py modules/pe.py abstracts.py colors.py
+13. viper.py -> console.py -> plugins.py -> modules/pe.py -> abstracts.py -> colors.py
+
+ ```
+ pe.py 模組需要繼承 abstracts.py 中的基因。 
+ ```
 
 14. viper.py console.py plugins.py modules/pe.py session.py out.py colors.py 
 
