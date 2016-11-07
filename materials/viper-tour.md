@@ -61,6 +61,13 @@
 
 9. viper.py -> console.py -> plugins.py -> modules/fuzzy.py -> session.py -> out.py -> colors.py
 
+ ```
+ fuzzy.py 用 session.py 來檢查三件事。
+ 1. __session__.is.set() 檢查 session 是否開啟。
+ 2. 檢查該 session 中樣本是否有 ssdeep hash available。
+ 3. 用 pydeep 比較現在分析的檔案 (__session__.file.ssdeep) 跟從 db 裡撈出之樣本 (sample.ssdeep)。
+ ```
+
 10. viper.py console.py plugins.py modules/fuzzy.py session.py objects.py 
 
 11. viper.py console.py plugins.py modules/pe.py out.py colors.py
