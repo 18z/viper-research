@@ -34,7 +34,7 @@
  若 console 接到內建模組 fuzzy 指令，則會透過 plugins.py 載入 fuzzy 模組。
  用 dict 與 inspect 實作。 inspect 取得 module object。
  plugins[member_object.cmd] = dict(obj=member_object, description=member_object.description)
- 將相對應指令塞入 dict 的 key 值，並透過建立巢狀迴圈，將 obj=member_object。
+ 將相對應指令塞入 dict 的 key 值，並透過建立巢狀字典，將 obj=member_object。
  開發者就可透過 module = __modules__[root]['obj']() 初始化模組的 instance。
  ```
 
@@ -82,7 +82,7 @@
  若 console 接到內建模組 pe 指令，則會透過 plugins.py 載入 pe 模組。
  用 dict 與 inspect 實作。 inspect 取得 module object。
  plugins[member_object.cmd] = dict(obj=member_object, description=member_object.description)
- 將相對應指令塞入 dict 的 key 值，並透過建立巢狀迴圈，將 obj=member_object。
+ 將相對應指令塞入 dict 的 key 值，並透過建立巢狀字典，將 obj=member_object。
  開發者就可透過 module = __modules__[root]['obj']() 初始化模組的 instance。
  ```
 
@@ -121,7 +121,7 @@
  若 console 接到內建模組 strings 指令，則會透過 plugins.py 載入 strings 模組。
  用 dict 與 inspect 實作。 inspect 取得 module object。
  plugins[member_object.cmd] = dict(obj=member_object, description=member_object.description)
- 將相對應指令塞入 dict 的 key 值，並透過建立巢狀迴圈，將 obj=member_object。
+ 將相對應指令塞入 dict 的 key 值，並透過建立巢狀字典，將 obj=member_object。
  開發者就可透過 module = __modules__[root]['obj']() 初始化模組的 instance。
  ```
 
@@ -154,7 +154,7 @@
  若 console 接到內建模組 virustotal 指令，則會透過 plugins.py 載入 virustotal 模組。
  用 dict 與 inspect 實作。 inspect 取得 module object。
  plugins[member_object.cmd] = dict(obj=member_object, description=member_object.description)
- 將相對應指令塞入 dict 的 key 值，並透過建立巢狀迴圈，將 obj=member_object。
+ 將相對應指令塞入 dict 的 key 值，並透過建立巢狀字典，將 obj=member_object。
  開發者就可透過 module = __modules__[root]['obj']() 初始化模組的 instance。
  ```
 
@@ -172,13 +172,35 @@
  2. 利用 __session__.file.md5 取得檔案 md5 hash，餵到 virustotal 查詢。
  ```
 
-23. viper.py console.py plugins.py modules/virustotal.py session.py objects.py
+23. viper.py -> console.py -> plugins.py -> modules/virustotal.py -> session.py -> objects.py
 
-24. viper.py console.py plugins.py modules/yarascan.py out.py colors.py
+ ```
+ 此處 session.py 中 objects.py 沒被用到。
+ objects.py 用來負責計算與提供，正被分析檔案的基本資訊，例如：檔案類型，sha256 hash value 等。
+ 而此事，早在 session 一打開時就計算完畢了
+ ```
 
-25. viper.py console.py plugins.py modules/yarascan.py abstracts.py colors.py
+24. viper.py -> console.py -> plugins.py -> modules/yarascan.py -> out.py -> colors.py
 
-26. viper.py console.py plugins.py modules/yarascan.py database.py out.py colors.py
+ ```
+ 若 console 接到內建模組 strings 指令，則會透過 plugins.py 載入 pe 模組。
+ 用 dict 與 inspect 實作。 inspect 取得 module object。
+ plugins[member_object.cmd] = dict(obj=member_object, description=member_object.description)
+ 將相對應指令塞入 dict 的 key 值，並透過建立巢狀字典，將 obj=member_object。
+ 開發者就可透過 module = __modules__[root]['obj']() 初始化模組的 instance。
+ ```
+
+25. viper.py -> console.py -> plugins.py -> modules/yarascan.py -> abstracts.py -> colors.py
+
+ ```
+ yarascan.py 模組需要繼承 abstracts.py 中的基因。 
+ ```
+
+26. viper.py -> console.py -> plugins.py -> modules/yarascan.py -> database.py -> out.py -> colors.py
+
+ ```
+ 
+ ```
 
 27. viper.py console.py plugins.py modules/yarascan.py database.py objects.py
 
