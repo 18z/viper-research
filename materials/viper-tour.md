@@ -76,7 +76,15 @@
  而此事，早在 session 一打開時就計算完畢了。
  ```
 
-11. viper.py console.py plugins.py modules/pe.py out.py colors.py
+11. viper.py -> console.py -> plugins.py -> modules/pe.py -> out.py -> colors.py
+
+ ```
+ 若 console 接到內建模組 pe 指令，則會透過 plugins.py 載入 pe 模組。
+ 用 dict 與 inspect 實作。 inspect 取得 module object。
+ plugins[member_object.cmd] = dict(obj=member_object, description=member_object.description)
+ 將相對應指令塞入 dict 的 key 值，並透過建立巢狀迴圈，將 obj=member_object。
+ 開發者就可透過 module = __modules__[root]['obj']() 初始化模組的 instance。
+ ```
 
 12. viper.py console.py plugins.py modules/pe.py objects.py
 
