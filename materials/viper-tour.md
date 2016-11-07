@@ -251,7 +251,16 @@
  所以直接用 colors.py 中的顏色顯示輸出。
  ```
 
-33. viper.py console.py commands.py session.py out.py colors.py
+33. viper.py -> console.py -> commands.py -> session.py -> out.py -> colors.py
+
+ ```
+ commands.py 用 session.py 處理下列事：
+ 1. 檔案被分析時，就會開啟 session，並將檔案相關資訊 (file type, hash value, file path etc.) 載入。
+ 2. 用 __session__.clear() 關掉 session。
+ 3. 印出檔案資訊時，會先檢查 session 是否 open。
+ 4. 儲存檔案到 local repository 時，以及儲存檔案資訊到 db 時，會先檢查 session 是否 open。
+ 5. 刪除檔案，以及刪除 db 中檔案資訊時，會先檢查 session 是否 open。
+ ```
 
 34. viper.py console.py commands.py session.py objects.py
 
