@@ -115,15 +115,44 @@
  而此事，早在 session 一打開時就計算完畢了。
  ```
 
-16. viper.py console.py plugins.py modules/strings.py out.py colors.py
+16. viper.py -> console.py -> plugins.py -> modules/strings.py -> out.py -> colors.py
 
-17. viper.py console.py plugins.py modules/strings.py abstracts.py colors.py
+ ```
+ 若 console 接到內建模組 strings 指令，則會透過 plugins.py 載入 pe 模組。
+ 用 dict 與 inspect 實作。 inspect 取得 module object。
+ plugins[member_object.cmd] = dict(obj=member_object, description=member_object.description)
+ 將相對應指令塞入 dict 的 key 值，並透過建立巢狀迴圈，將 obj=member_object。
+ 開發者就可透過 module = __modules__[root]['obj']() 初始化模組的 instance。
+ ```
 
-18. viper.py console.py plugins.py modules/strings.py session.py out.py colors.py
+17. viper.py -> console.py -> plugins.py -> modules/strings.py -> abstracts.py -> colors.py
 
-19. viper.py console.py plugins.py modules/strings.py session.py objects.py 
+ ```
+ strings.py 模組需要繼承 abstracts.py 中的基因。 
+ ```
 
-20. viper.py console.py plugins.py modules/virustotal.py out.py colors.py
+18. viper.py -> console.py -> plugins.py -> modules/strings.py -> session.py -> out.py -> colors.py
+
+ ```
+ strings.py 用 session.py 來檢查三件事。
+ 1. __session__.is.set() 檢查 session 是否開啟。
+ 2. 檢查 __session__.file.path 是否存在。
+ 3. 用 open(__session__.file.path, 'r').read() 讀取檔案，爬字串。
+ ```
+
+19. viper.py -> console.py -> plugins.py -> modules/strings.py -> session.py -> objects.py 
+
+ ```
+ 此處 session.py 中 objects.py 沒被用到。
+ objects.py 用來負責計算與提供，正被分析檔案的基本資訊，例如：檔案類型，sha256 hash value 等。
+ 而此事，早在 session 一打開時就計算完畢了
+ ```
+
+20. viper.py -> console.py -> plugins.py -> modules/virustotal.py -> out.py -> colors.py
+
+ ```
+ 
+ ```
 
 21. viper.py console.py plugins.py modules/virustotal.py abstracts.py colors.py
 
