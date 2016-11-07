@@ -158,9 +158,19 @@
  開發者就可透過 module = __modules__[root]['obj']() 初始化模組的 instance。
  ```
 
-21. viper.py console.py plugins.py modules/virustotal.py abstracts.py colors.py
+21. viper.py -> console.py -> plugins.py -> modules/virustotal.py -> abstracts.py -> colors.py
 
-22. viper.py console.py plugins.py modules/virustotal.py session.py out.py colors.py
+ ```
+ virustotal.py 模組需要繼承 abstracts.py 中的基因。
+ ```
+
+22. viper.py -> console.py -> plugins.py -> modules/virustotal.py -> session.py -> out.py -> colors.py
+
+ ```
+ virustotal.py 用 session.py 來檢查三件事。
+ 1. __session__.is.set() 檢查 session 是否開啟。
+ 2. 利用 __session__.file.md5 取得檔案 md5 hash，餵到 virustotal 查詢。
+ ```
 
 23. viper.py console.py plugins.py modules/virustotal.py session.py objects.py
 
