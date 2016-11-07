@@ -86,7 +86,11 @@
  開發者就可透過 module = __modules__[root]['obj']() 初始化模組的 instance。
  ```
 
-12. viper.py console.py plugins.py modules/pe.py objects.py
+12. viper.py -> console.py -> plugins.py -> modules/pe.py -> objects.py
+
+ ```
+ 此處 objects.py 中 File 沒被用到。
+ ```
 
 13. viper.py console.py plugins.py modules/pe.py abstracts.py colors.py
 
