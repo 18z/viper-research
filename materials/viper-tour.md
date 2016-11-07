@@ -52,6 +52,13 @@
 
 8. viper.py -> console.py -> plugins.py -> modules/fuzzy.py -> database.py -> objects.py
 
+ ```
+ 新增樣本到資料庫中，會利用 objects.File 算出樣本基本資訊 (sha256, md5 等)。
+ 或是
+ objects.py 中同時定義了 Singleton 模式，供 Database 類別繼承，保證一個類別只能有一個 instance。
+ 但此處 fuzzy.py 沒用到任何一種功能。
+ ```
+
 9. viper.py -> console.py -> plugins.py -> modules/fuzzy.py -> session.py -> out.py -> colors.py
 
 10. viper.py console.py plugins.py modules/fuzzy.py session.py objects.py 
