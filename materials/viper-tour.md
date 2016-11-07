@@ -98,7 +98,11 @@
  pe.py 模組需要繼承 abstracts.py 中的基因。 
  ```
 
-14. viper.py console.py plugins.py modules/pe.py session.py out.py colors.py 
+14. viper.py -> console.py -> plugins.py -> modules/pe.py -> session.py -> out.py -> colors.py 
+
+ ```
+
+ ```
 
 15. viper.py console.py plugins.py modules/pe.py session.py objects.py
 
