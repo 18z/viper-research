@@ -46,6 +46,10 @@
 
 7. viper.py -> console.py -> plugins.py -> modules/fuzzy.py -> database.py -> out.py -> colors.py
 
+ ```
+ fuzzy.py 透過 Database 尋找相似檔案。
+ ```
+
 8. viper.py -> console.py -> plugins.py -> modules/fuzzy.py -> database.py -> objects.py
 
 9. viper.py -> console.py -> plugins.py -> modules/fuzzy.py -> session.py -> out.py -> colors.py
