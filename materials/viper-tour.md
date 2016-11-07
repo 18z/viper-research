@@ -199,7 +199,10 @@
 26. viper.py -> console.py -> plugins.py -> modules/yarascan.py -> database.py -> out.py -> colors.py
 
  ```
- 
+ yarascan.py 從 db 裡撈出所有樣本 samples = db.find(key='all')，
+ 並用
+ rules.match(path)
+ 掃描樣本。
  ```
 
 27. viper.py console.py plugins.py modules/yarascan.py database.py objects.py
