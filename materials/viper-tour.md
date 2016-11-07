@@ -101,7 +101,10 @@
 14. viper.py -> console.py -> plugins.py -> modules/pe.py -> session.py -> out.py -> colors.py 
 
  ```
-
+ pe.py 用 session.py 來檢查三件事。
+ 1. __session__.is.set() 檢查 session 是否開啟。
+ 2. 用 pefile.PE 打開樣本取得 PE 資訊，其中樣本路徑由 __session__.file.path 取得。
+ 3. 將 PE file 中的 resource dump (圖片等資訊) 出來且指定 dump 到特定資料夾時會用到。
  ```
 
 15. viper.py console.py plugins.py modules/pe.py session.py objects.py
