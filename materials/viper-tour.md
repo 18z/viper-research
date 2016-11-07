@@ -230,7 +230,11 @@
  而此事，早在 session 一打開時就計算完畢了
  ```
  
-30. viper.py console.py plugins.py modules/yarascan.py storage.py 
+30. viper.py -> console.py -> plugins.py -> modules/yarascan.py -> storage.py 
+
+ ```
+ yarascan.py 掃描檔案前，需透過 storage 中的 get_sample_path 取得已儲存檔案之路徑。
+ ```
 
 31. viper.py console.py commands.py out.py colors.py
 
