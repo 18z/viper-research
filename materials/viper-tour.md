@@ -275,58 +275,164 @@
  在 cmd_help() 中，plugins.py 中 __modules__.item() 用來列出模組清單。
  ```
 
-36. viper.py console.py commands.py plugins.py modules/fuzzy.py out.py colors.py
+36. viper.py -> console.py -> commands.py -> plugins.py -> modules/fuzzy.py -> out.py -> colors.py
 
-37. viper.py console.py commands.py plugins.py modules/fuzzy.py abstracts.py colors.py
+ ```
+ commands.py 主要是定義系統指令，plugins.py 中的 __modules__ 只用來列出模組清單。
+ 沒做其他事。
+ 如果 plugins.py 要往下走，這部份請看 console.py。
+ ```
 
-38. viper.py console.py commands.py plugins.py modules/fuzzy.py database.py out.py colors.py
+37. viper.py ->  console.py -> commands.py -> plugins.py -> modules/fuzzy.py -> abstracts.py -> colors.py
 
-39. viper.py console.py commands.py plugins.py modules/fuzzy.py database.py objects.py 
+ ```
+ 同上
+ ```
 
-40. viper.py console.py commands.py plugins.py modules/fuzzy.py session.py out.py colors.py
+38. viper.py -> console.py -> commands.py -> plugins.py -> modules/fuzzy.py -> database.py -> out.py -> colors.py
 
-41. viper.py console.py commands.py plugins.py modules/fuzzy.py session.py objects.py
+ ```
+ 同上
+ ```
 
-42. viper.py console.py commands.py plugins.py modules/pe.py out.py colors.py
+39. viper.py -> console.py -> commands.py -> plugins.py -> modules/fuzzy.py -> database.py -> objects.py 
 
-43. viper.py console.py commands.py plugins.py modules/pe.py objects.py
+ ```
+ 同上
+ ```
+ 
+40. viper.py -> console.py -> commands.py -> plugins.py -> modules/fuzzy.py -> session.py -> out.py -> colors.py
 
-44. viper.py console.py commands.py plugins.py modules/pe.py abstracts.py colors.py
+ ```
+ 同上
+ ```
+ 
+41. viper.py -> console.py -> commands.py -> plugins.py -> modules/fuzzy.py -> session.py -> objects.py
 
-45. viper.py console.py commands.py plugins.py modules/pe.py session.py out.py colors.py
+ ```
+ 同上
+ ```
+ 
+42. viper.py -> console.py -> commands.py -> plugins.py -> modules/pe.py -> out.py -> colors.py
 
-46. viper.py console.py commands.py plugins.py modules/pe.py session.py objects.py
+ ```
+ 同上
+ ```
+ 
+43. viper.py -> console.py -> commands.py -> plugins.py -> modules/pe.py -> objects.py
 
-47. viper.py console.py commands.py plugins.py modules/strings.py out.py colors.py
+ ```
+ 同上
+ ```
+ 
+44. viper.py -> console.py -> commands.py -> plugins.py -> modules/pe.py -> abstracts.py -> colors.py
 
-48. viper.py console.py commands.py plugins.py modules/strings.py abstracts.py colors.py
+ ```
+ 同上
+ ```
+ 
+45. viper.py -> console.py -> commands.py -> plugins.py -> modules/pe.py -> session.py -> out.py -> colors.py
 
-49. viper.py console.py commands.py plugins.py modules/strings.py session.py out.py colors.py
+ ```
+ 同上
+ ```
+ 
+46. viper.py -> console.py -> commands.py -> plugins.py -> modules/pe.py -> session.py -> objects.py
 
-50. viper.py console.py commands.py plugins.py modules/strings.py session.py objects.py
+ ```
+ 同上
+ ```
+ 
+47. viper.py -> console.py -> commands.py -> plugins.py -> modules/strings.py -> out.py -> colors.py
 
-51. viper.py console.py commands.py plugins.py modules/virustotal.py out.py colors.py 
+ ```
+ 同上
+ ```
+ 
+48. viper.py -> console.py -> commands.py -> plugins.py -> modules/strings.py -> abstracts.py -> colors.py
 
-52. viper.py console.py commands.py plugins.py modules/virustotal.py abstracts.py colors.py
+ ```
+ 同上
+ ```
+ 
+49. viper.py -> console.py -> commands.py -> plugins.py -> modules/strings.py -> session.py -> out.py -> colors.py
 
-53. viper.py console.py commands.py plugins.py modules/virustotal.py session.py out.py colors.py
+ ```
+ 同上
+ ```
+ 
+50. viper.py -> console.py -> commands.py -> plugins.py -> modules/strings.py -> session.py -> objects.py
 
-54. viper.py console.py commands.py plugins.py modules/virustotal.py session.py objects.py
+ ```
+ 同上
+ ```
+ 
+51. viper.py -> console.py -> commands.py -> plugins.py -> modules/virustotal.py -> out.py -> colors.py 
 
-55. viper.py console.py commands.py plugins.py modules/yarascan.py out.py colors.py 
+ ```
+ 同上
+ ```
+ 
+52. viper.py -> console.py -> commands.py -> plugins.py -> modules/virustotal.py -> abstracts.py -> colors.py
 
-56. viper.py console.py commands.py plugins.py modules/yarascan.py abstracts.py colors.py
+ ```
+ 同上
+ ```
+ 
+53. viper.py -> console.py -> commands.py -> plugins.py -> modules/virustotal.py -> session.py -> out.py -> colors.py
 
-57. viper.py console.py commands.py plugins.py modules/yarascan.py database.py out.py colors.py
+ ```
+ 同上
+ ```
+ 
+54. viper.py -> console.py -> commands.py -> plugins.py -> modules/virustotal.py -> session.py -> objects.py
 
-58. viper.py console.py commands.py plugins.py modules/yarascan.py database.py objects.py
+ ```
+ 同上
+ ```
+ 
+55. viper.py -> console.py -> commands.py -> plugins.py -> modules/yarascan.py -> out.py -> colors.py 
 
-59. viper.py console.py commands.py plugins.py modules/yarascan.py session.py out.py colors.py
+ ```
+ 同上
+ ```
+ 
+56. viper.py -> console.py -> commands.py -> plugins.py -> modules/yarascan.py -> abstracts.py -> colors.py
 
-60. viper.py console.py commands.py plugins.py modules/yarascan.py session.py objects.py
+ ```
+ 同上
+ ```
+ 
+57. viper.py -> console.py -> commands.py -> plugins.py -> modules/yarascan.py -> database.py -> out.py -> colors.py
 
-61. viper.py console.py commands.py plugins.py modules/yarascan.py storage.py
+ ```
+ 同上
+ ```
+ 
+58. viper.py -> console.py -> commands.py -> plugins.py -> modules/yarascan.py -> database.py -> objects.py
 
+ ```
+ 同上
+ ```
+ 
+59. viper.py -> console.py -> commands.py -> plugins.py -> modules/yarascan.py -> session.py -> out.py -> colors.py
+
+ ```
+ 同上
+ ```
+ 
+60. viper.py -> console.py -> commands.py -> plugins.py -> modules/yarascan.py -> session.py -> objects.py
+
+ ```
+ 同上
+ ```
+ 
+61. viper.py -> console.py -> commands.py -> plugins.py -> modules/yarascan.py -> storage.py
+
+ ```
+ 同上
+ ```
+ 
 62. viper.py console.py commands.py database.py out.py colors.py 
 
 63. viper.py console.py commands.py database.py objects.py
