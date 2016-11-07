@@ -269,7 +269,11 @@
  在 open session 時，會先用 objects.py 中的 File 計算檔案 hash。  
  ```
 
-35. viper.py console.py commands.py plugins.py abstracts.py colors.py
+35. viper.py -> console.py -> commands.py -> plugins.py -> abstracts.py -> colors.py
+
+ ```
+ 在 cmd_help() 中，plugins.py 中 __modules__.item() 用來列出模組清單。
+ ```
 
 36. viper.py console.py commands.py plugins.py modules/fuzzy.py out.py colors.py
 
