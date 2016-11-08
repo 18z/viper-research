@@ -433,7 +433,15 @@
  同上
  ```
  
-62. viper.py console.py commands.py database.py out.py colors.py 
+62. viper.py -> console.py -> commands.py -> database.py -> out.py -> colors.py 
+
+ ```
+ commands.py 中 self.db = Database() 初始化 db instance。
+ 此 instance 用來
+ 1. cmd_store function 中用來儲存檔案。
+ 2. cmd_delete function 中用來尋找欲刪除檔案，以及刪除檔案。
+ 3. cmd_find function 中用來尋找檔案。
+ ```
 
 63. viper.py console.py commands.py database.py objects.py
 
