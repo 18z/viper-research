@@ -443,6 +443,17 @@
  3. cmd_find function 中用來尋找檔案。
  ```
 
-63. viper.py console.py commands.py database.py objects.py
+63. viper.py -> console.py -> commands.py -> database.py -> objects.py
+
+ ```
+ 在資料庫中操作時(儲存、尋找、刪除檔案)時，需要 objects.py 提供相關資訊以操作。
+ ```
 
 64. viper.py console.py commands.py storage.py
+
+ ```
+ cmd_store function 中，用到 store_sample，在檔案儲存前，將儲存路徑給定義好。
+ cmd_open function 中，用到 get_sample_path，取得檔案路徑。
+ cmd_delete function 中，用到 get_sample_path，取得欲刪除檔案之路徑。
+ 
+ ```
