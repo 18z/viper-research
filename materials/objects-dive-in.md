@@ -27,4 +27,14 @@ File 繼承自 object 類別。
 is_valid() 將檢查過程通通塞在 return 中以簡化程式碼。
 三者條件都要成立， return 1，若其中一者不成立則 return 0。
 
+若 is_valid() 為 1。
+則會將 self.name, self.size, self.type 變數塞入值。
+self.name = os.path.basename(self.path)
+self.size = os.path.getsize(self.path)
+self.type 之值，則是用到類別函式 get_type()取得。
+
+接著執行類別函式 self.get_hashes()
+以及填入 self.ssdeep 之值。
+
+self.ssdeep 之值，是用類別函式 get_ssdeep() 取得。
 ```
