@@ -37,4 +37,6 @@ self.type 之值，則是用到類別函式 get_type()取得。
 以及填入 self.ssdeep 之值。
 
 self.ssdeep 之值，是用類別函式 get_ssdeep() 取得。
+
+接著來看類別函式 get_type()
 ```
