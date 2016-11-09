@@ -41,11 +41,16 @@ self.ssdeep 之值，是用類別函式 get_ssdeep() 取得。
 接著來看類別函式 get_type()
 
 作者用了三種方法來取得 file type。
-1. 用 magic-python module 來做。
+1. 先用 magic-python module 來做。
    https://github.com/mammadori/magic-python
-2. 用 python-magic 來做。
+2. 若第一種方法行不通，則用 python-magic 來做。
    https://github.com/ahupp/python-magic
-3. 用 subprocess 呼叫 file 指令來做。
+3. 若第二種方法行不通，再用 subprocess 呼叫 file 指令來做。
+
+最後，不管用了哪個方法，都會執行 ms.close()。
+這是為了第一個方法所寫。
+因此，也用 try except 將 ms.close() 包起來。
+若執行失敗(也就是用了第二或第三種方法取得 file_type)，則 pass。
 
 其中需要注意，很多網路上的教學都將 magic-python 與 python-magic 搞混。
 因兩者 import 時，都只要寫 import magic。
