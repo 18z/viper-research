@@ -39,7 +39,18 @@ self.type 之值，則是用到類別函式 get_type()取得。
 self.ssdeep 之值，是用類別函式 get_ssdeep() 取得。
 
 接著來看類別函式 get_type()
-先初始化一 magic instance。
-magic.open(magic.MAGIC_NONE)
+
+作者用了三種方法來取得 file type。
+1. 用 magic-python module 來做。
+   https://github.com/mammadori/magic-python
+2. 用 python-magic 來做。
+   https://github.com/ahupp/python-magic
+3. 用 subprocess 呼叫 file 指令來做。
+
+其中需要注意，很多網路上的教學都將 magic-python 與 python-magic 搞混。
+因兩者 import 時，都只要寫 import magic。
+此狀況導致有 magic-python 使用者去 python-magic 作者 issue 發問。
+因此，python-magic 作者親自澄清，兩者是不一樣套件，只是剛好同名。
+詳見：https://github.com/ahupp/python-magic/issues/45
 
 ```
