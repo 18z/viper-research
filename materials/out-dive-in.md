@@ -7,7 +7,8 @@
 
 此程式功能有
 
-1. 此程式客製化不同執行狀態 (info, warning, error, success) 輸出訊息。
+1.  此程式客製化不同執行狀態 (info, warning, error, success) 輸出訊息。
+    
     假設用到 print_info() function。
     
     則會印出 print(bold(cyan("[*]")) + " {0}".format(message))
@@ -27,7 +28,12 @@
     eggs and spam
     
 
-2. 客製化表單。(以表單呈現 viper 之模組或指令)
+2.  客製化表單。(以表單呈現 viper 之模組或指令)
 
+    用到 table()，需傳入兩個變數， header 跟 rows。
+    傳入後，先用 prettyTable(header) 建立 table instance。
+    接著利用 table.align 與 table.padding_width 設定 table 格式。
+    
+    最後用 table.add_row() 逐一將 row 塞入 table 中。
 
 ```
