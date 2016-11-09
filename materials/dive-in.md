@@ -2,7 +2,7 @@
 
 * [x] [colors.py](https://github.com/18z/viper-research/blob/master/materials/colors-dive-in.md)
 
-out.py
+* [x] [out.py](https://github.com/18z/viper-research/blob/master/materials/out-dive-in.md)
 
 objects.py
 
