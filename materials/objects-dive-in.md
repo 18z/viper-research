@@ -39,4 +39,7 @@ self.type 之值，則是用到類別函式 get_type()取得。
 self.ssdeep 之值，是用類別函式 get_ssdeep() 取得。
 
 接著來看類別函式 get_type()
+先初始化一 magic instance。
+magic.open(magic.MAGIC_NONE)
+
 ```
