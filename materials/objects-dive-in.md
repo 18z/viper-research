@@ -78,4 +78,11 @@ line 69，中 self.get_chunks() 是 generator 型態
 接著呼叫 get_ssdeep()，計算 ssdeep 值。
 首先檢查是否有 import ssdeep 模組
 若有，則用 pydeep 模組計算檔案 ssdeep 值，並回傳。
+
+再看 data()，上有 decorator @property。
+感覺要對檔案型態做 setter, deleter 處理，但沒看到作者寫這部份。
+另，from objects import File 有三個程式，
+database.py, session.py, pe.py
+經檢查，三者皆無用到 data()。
+
 ```
