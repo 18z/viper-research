@@ -8,7 +8,7 @@
 
 * [x] [session.py](https://github.com/18z/viper-research/blob/master/materials/session-dive-in.md)
 
-abstracts.py
+* [x] [abstracts.py](https://github.com/18z/viper-research/blob/master/materials/abstracts-dive-in.md)
 
 database.py
 
