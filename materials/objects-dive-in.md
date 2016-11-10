@@ -88,4 +88,15 @@ https://docs.python.org/2/library/functions.html#property
 database.py, session.py, pe.py
 經檢查，三者皆無用到 data()。
 
+File 類別探討完畢
+
+接著探討 Singleton 類別。
+
+作者實作一 Singleton 類別，讓 database 中的類別得以繼承。
+確保一個類別只能有一個 instance。
+
+實作方式作者似乎參考
+http://stackoverflow.com/questions/6760685/creating-a-singleton-in-python
+
+此處筆者不深入探討。
 ```
