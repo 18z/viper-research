@@ -4,7 +4,7 @@
 
 * [x] [out.py](https://github.com/18z/viper-research/blob/master/materials/out-dive-in.md)
 
-objects.py
+* [x] [objects.py](https://github.com/18z/viper-research/blob/master/materials/objects-dive-in.md)
 
 session.py
 
