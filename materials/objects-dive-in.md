@@ -81,6 +81,9 @@ line 69，中 self.get_chunks() 是 generator 型態
 
 再看 data()，上有 decorator @property。
 感覺要對檔案型態做 setter, deleter 處理，但沒看到作者寫這部份。
+property 裝飾子使用可參考： 
+https://docs.python.org/2/library/functions.html#property
+
 另，from objects import File 有三個程式，
 database.py, session.py, pe.py
 經檢查，三者皆無用到 data()。
