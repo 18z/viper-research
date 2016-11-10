@@ -58,4 +58,21 @@ self.ssdeep 之值，是用類別函式 get_ssdeep() 取得。
 因此，python-magic 作者親自澄清，兩者是不一樣套件，只是剛好同名。
 詳見：https://github.com/ahupp/python-magic/issues/45
 
+接著，利用 get_hashes() 計算各種 file hashes。
+get_hashes() 中，首先用 hashlib.md5() 及 hashlib.sh256() 等
+初始化 instances。
+
+接者呼叫 get_chunks() 將大檔案切割成 chunks，防止檔案太大無法一次全部放進 memory 中。
+
+get_chunks() 中，每個 chunk 切割大小為 16 * 1024 bits，
+且用 yield 確保 chunks 會依序切割下去，而非每次只切割到第一段。
+其中，fd.read(16 * 1024) 會切割第一段 chunk，
+再執行一次則會切割第二段。
+
+line 69，中 self.get_chunks() 是 generator 型態
+用 for 迴圈，將 generator 中的每一個 chunk.next() 依序抓出來。
+並用 md5.update(chunk) 將每一段接在一起。
+
+最後，再用 md5.hexdigest()，將接在一起完整檔案，計算 file hash。
+
 ```
