@@ -6,7 +6,7 @@
 
 * [x] [objects.py](https://github.com/18z/viper-research/blob/master/materials/objects-dive-in.md)
 
-session.py
+* [x] [session.py](https://github.com/18z/viper-research/blob/master/materials/session-dive-in.md)
 
 abstracts.py
 
