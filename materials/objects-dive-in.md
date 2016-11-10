@@ -75,4 +75,7 @@ line 69，中 self.get_chunks() 是 generator 型態
 
 最後，再用 md5.hexdigest()，將接在一起完整檔案，計算 file hash。
 
+接著呼叫 get_ssdeep()，計算 ssdeep 值。
+首先檢查是否有 import ssdeep 模組
+若有，則用 pydeep 模組計算檔案 ssdeep 值，並回傳。
 ```
