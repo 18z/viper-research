@@ -34,5 +34,9 @@ all 即包含 save-update, merge, refresh-expire, expinge, delet 這些動作
 
 所以，可能作者誤用，因此重複用了 delete，或當時 sqlalchemy 版本如此撰寫。
 
+初步理解：
+delete: 父親被刪除，所有兒子被刪除。
+delete-orphan: 若有孤兒，則刪除所有孤兒。
+backref: 讓 Tag 也可以 reference 回去 malware，但無法刪除 malware。
 
 ```
