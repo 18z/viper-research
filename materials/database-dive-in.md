@@ -39,4 +39,10 @@ delete: 父親被刪除，所有兒子被刪除。
 delete-orphan: 若有孤兒，則刪除所有孤兒。
 backref: 讓 Tag 也可以 reference 回去 malware，但無法刪除 malware。
 
+__table_args__: 除了 name, metadata, mapped Column 這些參數設定之外，其他設定可用 __table_args__
+http://docs.sqlalchemy.org/en/latest/orm/extensions/declarative/table_config.html
+
+Index: 設定 table 參數。理解是 place a uniq index anonymously on md5, crc32, sha1, sha256, sha512 欄位。
+http://docs.sqlalchemy.org/en/latest/core/constraints.html
+
 ```
