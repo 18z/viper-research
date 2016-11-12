@@ -74,13 +74,14 @@ class Malware(Base) 中
 則表示 python 會用 __metaclass__ 來創建該類別。
 
 一般來說 python 都是用 type 來創建類別。
-用 __metaclass__ 指定，才會用其他元類來創建類別。
+也就是說，若無特別指定，一般 class 都是 type 的 class instance。
+用 __metaclass__ 指定，才會用其他元類來創建 class instance。
 
-那 __metaclass__ 也就是 Singleton 中都寫了什麼？
-寫了建構類別時可以用的東西。
+那 __metaclass__，也就是 Singleton 中都寫了什麼？
+簡單說，就是寫一個類別。
 
-那  __metaclass__ 跟繼承父類別差別是？
-__metaclass__ 感覺是最接近源頭的東西。
+那 __metaclass__ 跟繼承父類別差別是？
+__metaclass__ 感覺是更接近源頭的東西。
 跟繼承父類別相比，似乎可以做更多更細膩的操弄。
 例如此地用於限制 Database 只能同時間只能存在一個 instance。
 
