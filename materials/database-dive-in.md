@@ -64,4 +64,30 @@ is information-rich and unambiguous.
 class Malware(Base) 中
 最後一部分是初始化 __init__ class 中用到之變數。
 
+接著是 class Tag(Base)
+與 class Malware 相同，皆是資料表的設定，觀念相同，因此不贅述。
+
+最後是 class Database:
+首先看到 __metaclass__，
+簡單說，metaclass 就是建立類別時的規範，
+如果我們在寫類別時，加入 __metaclass__ 屬性，
+則表示 python 會用 __metaclass__ 來創建該類別。
+
+一般來說 python 都是用 type 來創建類別。
+用 __metaclass__ 指定，才會用其他元類來創建類別。
+
+那 __metaclass__ 也就是 Singleton 中都寫了什麼？
+寫了建構類別時可以用的東西。
+
+那  __metaclass__ 跟繼承父類別差別是？
+__metaclass__ 感覺是最接近源頭的東西。
+跟繼承父類別相比，似乎可以做更多更細膩的操弄。
+例如此地用於限制 Database 只能同時間只能存在一個 instance。
+
+參考文獻： http://blog.jobbole.com/21351/
+
+
+
+
+
 ```
