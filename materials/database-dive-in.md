@@ -45,4 +45,23 @@ http://docs.sqlalchemy.org/en/latest/orm/extensions/declarative/table_config.htm
 Index: 設定 table 參數。理解是 place a uniq index anonymously on md5, crc32, sha1, sha256, sha512 欄位。
 http://docs.sqlalchemy.org/en/latest/core/constraints.html
 
+接著是 to_dict()，
+大致理解是將表單中 column 塞到字典中。
+目前尚未看到 to_dict() 在專案中被使用。
+
+__repr__()
+https://docs.python.org/2/reference/datamodel.html
+Called by the repr() built-in function and by string conversions (reverse quotes) 
+to compute the “official” string representation of an object. 
+依據手冊，此 function 回傳字串。該字串是一物件之官方描述。
+
+This is typically used for debugging, 
+so it is important that the representation 
+通常在 debugging 時會用。
+is information-rich and unambiguous.
+因此，官方描述需明確不模糊。
+
+class Malware(Base) 中
+最後一部分是初始化 __init__ class 中用到之變數。
+
 ```
