@@ -87,8 +87,27 @@ __metaclass__ 感覺是更接近源頭的東西。
 
 參考文獻： http://blog.jobbole.com/21351/
 
+Databse 類別初始化時，
+先建立資料庫引擎 instance。
+poolclass = NullPool 
+表示不使用 connection pool。也就是不允許閒置連線。
 
+engine.echo = False
+表示 engine 將不紀錄所有 statement。 
 
+engine.pool_timeout = 60
+此處與 NullPool 對不上來。目前不知如何解釋。
+
+Base.metadata.create_all(self.engine)
+create the table and tell it to create it in the database engine that is passed
+在 self.engine 中建立 table。
+
+self.Session = sessionmaker(bind=self.engine)
+透過將 session 綁定 self.engine，並建立 Session instance。
+即可透過 Session 與 database 互動，例如：query 等。
+
+__del__
+可用 del db instance 來拋棄現有的 engine。
 
 
 ```
