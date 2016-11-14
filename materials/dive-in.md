@@ -14,7 +14,7 @@
 
 * [x] [storage.py](https://github.com/18z/viper-research/blob/master/materials/storage-dive-in.md)
 
-plugins.py
+* [x] [plugins.py](https://github.com/18z/viper-research/blob/master/materials/plugins-dive-in.md)
 
 commands.py
 
