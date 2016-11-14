@@ -59,6 +59,10 @@ saus = _temp.sausage
 從定義與手冊上範例來看
 
 fromlist 中寫 dummy 或許是可省略的？
+解答：
+是可省略，但得剛好 name 參數的值不是 package.module 形式，若是，則會 return package。
+但若 fromlist 不為空值，則會 return module。
+dummy 意思就是防範這樣的錯誤發生。
 
 __import__ 後，用 inspect.getmembers() 取得 module 裡 all the members。
 function 回傳 member_name 及 member_object。
