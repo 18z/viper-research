@@ -161,7 +161,18 @@ The session object's default behavior is to expire all state.
 
 不了解為何要二次 commit。
 
+接著看到 delete function。
 
+首先用 session 初始化與 db 的 conversation。
+透過 find 找到的 id，去 query Malware 表。
+接著透過 session.delete(malware) 刪除樣本。
+再透過 session.commit() 將更動寫入資料庫。
+
+這裡只檢查是否有 SQLAlchemyError，
+若有，則 session.rollback()
+最後不管如何，會將 session.close()。
+
+接著看到 find function
 
 
 ```
