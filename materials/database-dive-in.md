@@ -137,5 +137,31 @@ cmd_store function 傳入的參數只有 obj。
 The session object's default behavior is to expire all state.
 個人猜測，恢復所有狀態至 commit 前。
 
+若有 tags，
+則先將 tags 用 strip() 移除多餘空白字元。
+接著，若 tags中有 "," 則用 split 將每個以逗號區隔的字串獨立
+並依序塞入 list。
+隨後再將 list 裡每個字串轉成小寫。
+若是空字串，則 continue。
+
+每個被切出來的字串
+會透過 malware_entry.tag.append(Tag(tag)) 處理
+首先，以 Tag 初始化一 instance，並將它 append 到 malware_entry.tag list 中。
+此處先猜測 relationship 處理後結果，是 list。
+以上動作理解成，malware_entry 這個 sample，透過 relationship，將 tag instance 綁在一起。
+綁定後，透過 session.commit() 將綁定結果寫入資料庫中。
+
+當然，寫入時也會檢查是否有 IntegrityError 以及 SQLAlchemyError。
+若發生 IntegrityError，
+則會先 session.rollback()
+接著用 session.query() 從資料庫中找出同一個 tag，並將結果 append 到 malware_entry.tag 
+再 session.commit() 一次。
+
+若第二次 commit() 失敗，則跳 SQLAlchemyError，並 session.rollback()
+
+不了解為何要二次 commit。
+
+
+
 
 ```
