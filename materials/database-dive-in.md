@@ -173,6 +173,14 @@ The session object's default behavior is to expire all state.
 最後不管如何，會將 session.close()。
 
 接著看到 find function
+兩個欄位，第一欄位為 key
+第二欄位為 value。
 
+搜尋可分成列出資料庫所有資料模式
+以及
+以 md5, sha256, ssdeep,tag 的搜尋模式。
+
+最後是 list_tags() function。
+也就是將所有 tags 都列出來。
 
 ```
