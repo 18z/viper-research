@@ -109,5 +109,19 @@ self.Session = sessionmaker(bind=self.engine)
 __del__
 可用 del db instance 來拋棄現有的 engine。
 
+接著看到 add function。
+在 commands.py 中，cmd_store function 被呼叫。
 
+傳入參數為 obj，name, tags。
+但 name, tags 預設皆為 None。
+cmd_store function 傳入的參數只有 obj。
+
+進入 add function 後
+首先初始化 session instance，開啟跟 engine 的  conversation。
+
+接著檢查 name 變數有無給值，
+若無則將 obj.name 之值給予 name 變數。
+
+接著確認 obj 是否是 File class 的 instance。
+若是，
 ```
