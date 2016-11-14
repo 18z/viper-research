@@ -10,7 +10,7 @@
 
 * [x] [abstracts.py](https://github.com/18z/viper-research/blob/master/materials/abstracts-dive-in.md)
 
-database.py
+* [x] [database.py](https://github.com/18z/viper-research/blob/master/materials/database-dive-in.md)
 
 storage.py
 
