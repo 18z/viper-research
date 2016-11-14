@@ -123,5 +123,19 @@ cmd_store function 傳入的參數只有 obj。
 若無則將 obj.name 之值給予 name 變數。
 
 接著確認 obj 是否是 File class 的 instance。
-若是，
+若是，則初始化 malware_entry instance，並將 obj 相關資訊傳入Malware 建構子。
+將 malware_entry instance 加入 session。
+並透過 session.commit() 將資料寫入資料庫。
+
+若是 Insert or update duplicate key in SQLAlchemy 則 raise integrityError。
+接著 session.rollback() 恢復至 commit() 之前
+並將 malware_entry 改成資料庫中已存在的 malware。
+
+其他一般錯誤發生，則 raise SQLAlchemyError。
+
+錯誤發生時，皆會呼叫 session.rollback()，
+The session object's default behavior is to expire all state.
+個人猜測，恢復所有狀態至 commit 前。
+
+
 ```
