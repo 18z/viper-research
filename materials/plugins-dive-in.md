@@ -60,7 +60,17 @@ saus = _temp.sausage
 
 fromlist 中寫 dummy 或許是可省略的？
 
+__import__ 後，用 inspect.getmembers() 取得 module 裡 all the members。
+function 回傳 member_name 及 member_object。
+member_object 會先被檢查是否為 class。
+接著再被檢查是否繼承自 Module 且 member_object 不是 Module 本身。
+若通過檢查，
 
+就用
 
+plugins[member_object.cmd] = dict(obj=member_object, description=member_object.description)
+將相對應指令塞入 dict 的 key 值，並透過建立巢狀字典，將 obj=member_object。
+開發者就可透過 module = __modules__[root]['obj']() 初始化模組的 instance。
 
+參考文獻：https://docs.python.org/2/library/inspect.html
 ```
