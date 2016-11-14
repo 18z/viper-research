@@ -46,7 +46,19 @@ fromlist: The fromlist gives the names of objects or submodules
 
 level: specifies whether to use absolute or relative imports. 
        The default is -1 which indicates both absolute and relative imports will be attempted.
-       
+
+https://docs.python.org/2/library/functions.html#__import__
+手冊範例：
+from spam.ham import eggs, sausage as saus
+
+等於
+_temp = __import__('spam.ham', globals(), locals(), ['eggs', 'sausage'], -1)
+eggs = _temp.eggs
+saus = _temp.sausage
+
+從定義與手冊上範例來看
+
+fromlist 中寫 dummy 或許是可省略的？
 
 
 
