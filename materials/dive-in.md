@@ -12,7 +12,7 @@
 
 * [x] [database.py](https://github.com/18z/viper-research/blob/master/materials/database-dive-in.md)
 
-storage.py
+* [x] [storage.py](https://github.com/18z/viper-research/blob/master/materials/storage-dive-in.md)
 
 plugins.py
 
