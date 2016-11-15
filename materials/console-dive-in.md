@@ -92,4 +92,41 @@ viper 也設置了 history 功能
 
 最後用 atexit 在程式結束後，將指令寫入 history file。
 
+接著進入 console 的 main loop。
+當 self.active flag = True 時
+loop 持續運行
+
+運行時，首先用 __session__.is_set() 檢查 session 是否 open。
+若有，則客製化 prompt， shell + __session__.file.path + >
+若無，prompt 就簡單是 shell >
+
+接者用 raw_input 等待使用者輸入指令。
+接到指令後，用 strip() 將字串前後空白弄掉。
+再將處理後結果 丟給 data
+
+此階段有做例外處理，
+如發生 KeyboardInterrupt 則，印出 ""
+
+若發生EOFError則中止 loop。
+
+try-except 也可和 else 連用。
+所以，若沒順利接收使用者指令，沒發生錯誤的話。
+
+則先將 data 送給 keywords function 檢查是否有 $self，若有，則 replace 字串給 data。
+
+若 data 是空的，則 continue。
+
+若 data 開頭為 !，則執行 linux 系統指令
+並 continue
+
+若非以上兩種狀況，則將 data 送給 parse 處理
+找出指令，以及參數。
+
+如果指令是 exit 或 quit，則用 self.stop 中止迴圈。
+
+若指令是 self.cmd.commands 其中一個，則是 viper 系統指令
+接著便執行系統指令
+
+若指令是 __modules__ 其中一個，則執行模組指令。
+
 ```
