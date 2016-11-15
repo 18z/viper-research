@@ -84,6 +84,12 @@ readline.parse_and_bind('tab: complete')
 readline.set_completer(complete)
 設定 comoplete 引擎。
 
+viper 也設置了 history 功能
+首先建立 save_history 函式
+內容用 readline.write_history_file(path) 將指令寫入 history。
 
+接下來定義與建立 history file path。
+
+最後用 atexit 在程式結束後，將指令寫入 history file。
 
 ```
