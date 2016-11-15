@@ -30,5 +30,23 @@ list 中第 0 個 item 即表示 root。
 
 parse 處理完後，回傳 root 及 args。
 
+第二個函式是 keywords()
+傳入參數也是 data。
+
+主要用來檢查現在是否有 session opened
+檢查方法為，看 data 中有無關鍵字 $self。
+
+若有，則再檢查 __session__.is_set()
+session 是否有開。
+若有，則將 $self 取代為 __session__.file.path 檔案路徑
+否則，印出 "No session opened"
+
+最後再 return data。
+
+第三個函式是 stop()
+功能只有一個
+將 self.active 的 flag 改成 False。
+
+最後一個是 start()
 
 ```
