@@ -48,5 +48,29 @@ session 是否有開。
 將 self.active 的 flag 改成 False。
 
 最後一個是 start()
+首先利用 readline 模組建立 auto-complete 功能。
+其中 complete 函式為 completer，可以說實質做出補齊之函式。
+
+complete 中，傳入兩個參數，一為 text，另一為 state。
+text 為使用者輸入到一半的字串。
+state 為補齊之候選字串 position。
+
+complete 回傳 (glob.glob(text+'*')+[None])[state]
+首先看到 glob.glob(text+'*')
+glob.glob 作用即是幫忙找出檔名符合特定規則的文件。
+例如：目錄下有 1, 123, 223
+則 glob.glob('1'+'*')
+可幫找出 1, 123 兩檔案。
+
+glob.glob()之回傳值為 list 型態。
+因此，glob.glob(text+'*')+[None]就是在 glob 回傳的 list 最後，再加上 None。
+用意為 告知 completer 已經沒有符合規則之檔案名稱了。
+
+詳情可看文件解釋
+The completer function is called as function(text, state), 
+for state in 0, 1, 2, ..., until it returns a non-string value.
+參考文獻：https://docs.python.org/2/library/readline.html
+
+最後，comeplete 函式，回傳的是單一符合規則的檔名字串。
 
 ```
