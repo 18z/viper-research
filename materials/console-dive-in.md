@@ -73,4 +73,17 @@ for state in 0, 1, 2, ..., until it returns a non-string value.
 
 最後，comeplete 函式，回傳的是單一符合規則的檔名字串。
 
+readline.set_completer_delims(' \t\n;')
+打指令時，可能會需要自動補齊多次，分隔符號若用 ! 則後面所接的 word 就可以繼續用 auto-complete
+否則無法用。
+These determine the start of the word to be considered for completion.
+
+readline.parse_and_bind('tab: complete')
+將 init file parse，並 bind complete 功能給 tab 鍵 (猜測)
+
+readline.set_completer(complete)
+設定 comoplete 引擎。
+
+
+
 ```
