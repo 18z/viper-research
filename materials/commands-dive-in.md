@@ -117,8 +117,9 @@ argv 是其他沒被定義到的參數值 list
 若是 則 break 迴圈，若否則用 return 結束 cmd_delete。
 
 若是，則用 self.db.find('sha256', __session__.file.sha256) 找出檔案，並將結果 assign 給 rows
-rows 是 cursor？(此部份要細研究)
+rows 的 type 猜測是 list。
 接著，若 rows 不是空，則用 rows[0].id 將 malware_id 找出來。 (此行要再細究)
+其中 rows[0] type 是 class instance。
 並用 self.db.delete(malware.id) 刪除資料庫中該檔案資訊。
 若失敗，則印出 Unable to delete file。
 
