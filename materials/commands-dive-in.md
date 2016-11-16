@@ -122,10 +122,12 @@ rows 的 type 是 list。
 參考文獻：http://docs.sqlalchemy.org/en/latest/orm/query.html?highlight=query
 
 接著，若 rows 不是空，則用 rows[0].id 將 malware_id 找出來。
-
 其中 rows[0] type 是 class instance。
 並用 self.db.delete(malware.id) 刪除資料庫中該檔案資訊。
 若失敗，則印出 Unable to delete file。
+
+為何 rows[0] 一定會是 current opened file 呢？
+原因在於 store_sample 時，
 
 最後用 os.remove() 將 local repository 中檔案刪除
 並關掉 session。
