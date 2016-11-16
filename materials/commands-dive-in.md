@@ -127,7 +127,8 @@ rows 的 type 是 list。
 若失敗，則印出 Unable to delete file。
 
 為何 rows[0] 一定會是 current opened file 呢？
-原因在於 store_sample 時，
+原因在於 database.py 中 line 41 ~ line 49
+針對 md5, crc32, sha1, sha256, sha512 欄位，做 uniq。
 
 最後用 os.remove() 將 local repository 中檔案刪除
 並關掉 session。
