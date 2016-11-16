@@ -92,4 +92,23 @@ argv 是其他沒被定義到的參數值 list
 接著用 get_sample_path，取得檔案路徑
 若路徑 (path) 不是空的
 則用 __session__.set() 開啟 session。
+
+4. cmd_close()
+負責關掉 __session__
+
+5. cmd_info()
+負責印出現有 session 所分析檔案之基本資訊。
+使用 prettytable 以表格漂亮印出相關資訊。
+
+6. cmd_store()
+將 session打開的檔案存在 local repository
+將 檔案資訊存在 database。
+
+首先用 __session__.is_set() 檢查 session 是否開啟。
+接著用 store_sample(儲存檔案)後 ，將檔案路徑傳給 new_path 變數
+再用 seld.db.add(__session__.file) 將檔案資訊存到 db 中
+
+最後印出檔案儲存路徑，並重新開啟檔案 session。
+
+
 ```
