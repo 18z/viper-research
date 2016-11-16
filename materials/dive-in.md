@@ -16,7 +16,7 @@
 
 * [x] [plugins.py](https://github.com/18z/viper-research/blob/master/materials/plugins-dive-in.md)
 
-commands.py
+* [x] [commands.py](https://github.com/18z/viper-research/blob/master/materials/commands-dive-in.md)
 
 * [x] [console.py](https://github.com/18z/viper-research/blob/master/materials/console-dive-in.md)
 
