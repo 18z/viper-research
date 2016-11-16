@@ -49,5 +49,34 @@ self.commands 是用兩層 巢狀字典組成
 (plugins.py 中， line 30 將模組指令以與系統指令相同之巢狀字典方式，組成)
 
 
+3. cmd_open
+此函式首先接收 *args，不定參數，也就是可以接參數，但參數數量不限。
+函式中，定義了兩個函式 usage() 與 help()
+usage() 印出 open 使用方法簡單說明
+help() 中印出方法簡單說明與參數詳細說明
 
+接者用 getopt 開始 parse 參數
+getopt 回傳兩 item。
+1. opts
+2. argv
+
+opts 是個 list of (option, value)
+argv 是其他沒被定義到的參數值 list
+
+用 try 來 parse 參數
+若執行失敗，則 raise getopt.GetoptError 
+接著再印出 usage()
+再 return，結束 cmd_open
+
+接下來設定 is_file變數，預設是 False
+
+再來用迴圈處理 opts
+主要將 option 拿出來，看到底是 -h 還是 -f
+若是 -h，則印出 help()後直接 return 結束 cmd_open
+若是 -f 則將 is_file 改為 True
+
+接著變檢查 argv，也就是沒被定義的參數 list 長度是否為零
+如果是零，則表示 -f 後面沒有接檔案路徑。
+所以印出 usage()後，接 return 結束 cmd_open
+若 argv 長度非零，則將 list 中第一個 item 抓為檔案位置，也就是 target。
 ```
