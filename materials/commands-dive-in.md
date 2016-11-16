@@ -28,4 +28,26 @@ self.commands 是用兩層 巢狀字典組成
 
 因此 console.py 只要呼叫 self.cmd.commands[第一層(指令)][第二層(obj)]()
 就可執行 viper 系統函式。
+
+接下來逐一看類別函式。
+
+1. cmd_clear()
+此函式用 os.system('clear') 清除 shell 上訊息。
+
+2. cmd_help()
+此函式會印出 help 訊息，即系統指令與模組指令。
+首先印出 Commands
+並用迴圈 將 commands 中 items 抓出來，
+
+所以 command_name 就是 key (指令), command_item 就是 value(obj 與 description)。
+隨後將 key 與 value 塞進 list
+再將此 list 塞進 rows (也是個 list)
+
+接著用 prettytable 的 table 將系統指令以表格印出。
+
+同樣的方法運用至將模組指令與描述以 table 印出。
+(plugins.py 中， line 30 將模組指令以與系統指令相同之巢狀字典方式，組成)
+
+
+
 ```
