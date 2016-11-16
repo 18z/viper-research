@@ -87,7 +87,7 @@ argv 是其他沒被定義到的參數值 list
 
 若存在，則用 __session__.set() 開啟 session。
 
-若 is_file flag 為 False
+若 is_file flag 為 False (此種作法就是直接 open file)
 則用 .strip().lower() 方法將 argv[0] 先以空白為區隔丟進 list，再將 list 裡面字串通通轉為小寫。
 接著用 get_sample_path，取得檔案路徑
 若路徑 (path) 不是空的
