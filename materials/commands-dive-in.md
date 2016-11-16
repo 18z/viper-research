@@ -125,10 +125,12 @@ rows 是 cursor
 最後用 os.remove() 將 local repository 中檔案刪除
 並關掉 session。
 
-
-
-
-
-
 8. cmd_find()
+搜尋資料庫中檔案資訊
+
+首先檢查參數長度是否為零，若是，則表示沒給參數。
+接著開始 parse 參數，key 表示 sha256, value 表示 hash value。
+接著用 self.db.find(key, value) 將資料撈出來，倒給 items。
+若無資料，就用 return 結束 cmd_find。
+若有，則用 prettytable 印出檔案相關資訊。
 ```
