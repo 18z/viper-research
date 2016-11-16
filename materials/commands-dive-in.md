@@ -79,4 +79,17 @@ argv 是其他沒被定義到的參數值 list
 如果是零，則表示 -f 後面沒有接檔案路徑。
 所以印出 usage()後，接 return 結束 cmd_open
 若 argv 長度非零，則將 list 中第一個 item 抓為檔案位置，也就是 target。
+
+接著，檢查 is_file flag 是否為 True，
+若是，則用 os.path.expanduser() 處理 target 路徑，主要功能是將 ~ replace 成 $HOME。
+接著用 os.path.exists() 檢查路徑是否存在，以及使用 os.path.isfile()檢查是否為檔案。
+若不存在或不是檔案，則印出 File not found 錯誤訊息
+
+若存在，則用 __session__.set() 開啟 session。
+
+若 is_file flag 為 False
+則用 .strip().lower() 方法將 argv[0] 先以空白為區隔丟進 list，再將 list 裡面字串通通轉為小寫。
+接著用 get_sample_path，取得檔案路徑
+若路徑 (path) 不是空的
+則用 __session__.set() 開啟 session。
 ```
