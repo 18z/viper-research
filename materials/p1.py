@@ -1,4 +1,7 @@
+import sys
 from colors import color
+
+sys.setrecursionlimit(30000)
 
 module_list = []
 ordered_call_list = []
@@ -21,28 +24,29 @@ with open("d.txt") as f:
 
 def dive(i):
 
-    init_key = module_list[i][0]
-    init_value = module_list[i][1]
+    root_key = module_list[i][0].replace("'", "")
+    root_value = module_list[i][1].replace("'", "")
 
+    # print "root_value " + root_value
     # print init_key + " -> " + init_value
 
     counter = 0
     for item in module_list:
-        ref_key = item[0]
-        # ref_key = item[0]
-        ref_value = item[1]
+        ref_key = item[0].replace("'", "")
+        ref_value = item[1].replace("'", "")
 
-        if init_value == ref_key:
+        if root_value == ref_key:
             if "viper" in ref_value:
-                # print color(str(i) + "\t" + ref_key + "->" + ref_value, i)
-                # print str(i) + "\t" + ref_key + "->" + ref_value
-                ordered_call_list.append(
-                    [ref_key.replace("'", ""), ref_value.replace("'", ""), 1])
+                ordered_call_list.append([ref_key, ref_value, 1])
                 dive(counter)
             elif "modules" in ref_value:
-                ordered_call_list.append(
-                    [ref_key.replace("'", ""), ref_value.replace("'", ""), 1])
+                ordered_call_list.append([ref_key, ref_value, 1])
+                # print "modules found " + ref_key
                 dive(counter)
+        elif root_value in ref_key:
+            ordered_call_list.append(
+                [ref_key, ref_value, 1])
+            dive(counter)
 
         counter = counter + 1
 
@@ -66,6 +70,9 @@ for n in range(0, len(ordered_call_list)):
 
 for n in range(0, len(ordered_call_list)):
     if ordered_call_list[n][2] == 33:
-        print "\t" + color(ordered_call_list[n][1], ordered_call_list[n][2])
+        # if connection found
+        print "\t" + " -> " + color(ordered_call_list[n][1], ordered_call_list[n][2])
     else:
-        print color(ordered_call_list[n], ordered_call_list[n][2])
+        # print all
+        msg = ordered_call_list[n][0] + " -> " + ordered_call_list[n][1]
+        print color(msg, ordered_call_list[n][2])
