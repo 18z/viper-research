@@ -86,3 +86,6 @@ for n in range(0, len(ordered_call_list)):
             else:
                 msg = ordered_call_list[n][0] + "\n\t-> " + ordered_call_list[n][1]
                 print color(msg, ordered_call_list[n][2])
+        else:
+            msg = ordered_call_list[n][0] + "\n\t-> " + ordered_call_list[n][1]
+            print color(msg, ordered_call_list[n][2])
