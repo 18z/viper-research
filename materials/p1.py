@@ -39,6 +39,10 @@ def dive(i):
                 ordered_call_list.append(
                     [ref_key.replace("'", ""), ref_value.replace("'", ""), 1])
                 dive(counter)
+            elif "modules" in ref_value:
+                ordered_call_list.append(
+                    [ref_key.replace("'", ""), ref_value.replace("'", ""), 1])
+                dive(counter)
 
         counter = counter + 1
 
