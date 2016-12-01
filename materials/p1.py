@@ -79,10 +79,10 @@ for n in range(0, len(ordered_call_list)):
         print " o " + color(msg, ordered_call_list[n][2])
     else:
         # print all
-        # if n-2 > 0:
-        #     if ordered_call_list[n][0] == ordered_call_list[n-2][1]:
-        #         msg = "\t\t\t[e] " + ordered_call_list[n][0] + "\n\t\t\t-> " + ordered_call_list[n][1]
-        #         print color(msg, ordered_call_list[n][2])
-        # else:
-            msg = ordered_call_list[n][0] + "\n\t-> " + ordered_call_list[n][1]
-            print color(msg, ordered_call_list[n][2])
+        if n-2 > 0:
+            if ordered_call_list[n][0] == ordered_call_list[n-2][1]:
+                msg = "\t\t\t[e] " + ordered_call_list[n][0] + "\n\t\t\t-> " + ordered_call_list[n][1]
+                print color(msg, ordered_call_list[n][2])
+            else:
+                msg = ordered_call_list[n][0] + "\n\t-> " + ordered_call_list[n][1]
+                print color(msg, ordered_call_list[n][2])
