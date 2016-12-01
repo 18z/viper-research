@@ -73,11 +73,16 @@ for n in range(0, len(ordered_call_list)):
         # if connection found
         # print "\t-> " + color(ordered_call_list[n][1],
         # ordered_call_list[n][2])
-        print "\t-> " + color(ordered_call_list[n][1], ordered_call_list[n][2])
+        print "\t\t\t-> " + color(ordered_call_list[n][1], ordered_call_list[n][2])
     elif ordered_call_list[n][2] == 32:
-        msg = ordered_call_list[n][0] + "\n\t-> " + ordered_call_list[n][1]
-        print "" + color(msg, ordered_call_list[n][2])
+        msg = "\t\t" + ordered_call_list[n][0] + "\n\t\t\t-> " + ordered_call_list[n][1]
+        print " o " + color(msg, ordered_call_list[n][2])
     else:
         # print all
-        msg = ordered_call_list[n][0] + "\n\t-> " + ordered_call_list[n][1]
-        print color(msg, ordered_call_list[n][2])
+        # if n-2 > 0:
+        #     if ordered_call_list[n][0] == ordered_call_list[n-2][1]:
+        #         msg = "\t\t\t[e] " + ordered_call_list[n][0] + "\n\t\t\t-> " + ordered_call_list[n][1]
+        #         print color(msg, ordered_call_list[n][2])
+        # else:
+            msg = ordered_call_list[n][0] + "\n\t-> " + ordered_call_list[n][1]
+            print color(msg, ordered_call_list[n][2])
