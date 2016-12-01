@@ -1,7 +1,7 @@
 import sys
 from colors import color
 
-sys.setrecursionlimit(30000)
+# sys.setrecursionlimit(30000)
 
 module_list = []
 ordered_call_list = []
@@ -40,12 +40,12 @@ def dive(i):
                 ordered_call_list.append([ref_key, ref_value, 1])
                 dive(counter)
             elif "modules" in ref_value:
-                ordered_call_list.append([ref_key, ref_value, 1])
+                ordered_call_list.append([ref_key, ref_value, 31])
                 # print "modules found " + ref_key
                 dive(counter)
         elif root_value in ref_key:
-            ordered_call_list.append(
-                [ref_key, ref_value, 1])
+            if "viper" in ref_value:
+                ordered_call_list.append([ref_key, ref_value, 32])
             dive(counter)
 
         counter = counter + 1
@@ -71,8 +71,13 @@ for n in range(0, len(ordered_call_list)):
 for n in range(0, len(ordered_call_list)):
     if ordered_call_list[n][2] == 33:
         # if connection found
-        print "\t" + " -> " + color(ordered_call_list[n][1], ordered_call_list[n][2])
+        # print "\t-> " + color(ordered_call_list[n][1],
+        # ordered_call_list[n][2])
+        print "\t-> " + color(ordered_call_list[n][1], ordered_call_list[n][2])
+    elif ordered_call_list[n][2] == 32:
+        msg = ordered_call_list[n][0] + "\n\t-> " + ordered_call_list[n][1]
+        print "" + color(msg, ordered_call_list[n][2])
     else:
         # print all
-        msg = ordered_call_list[n][0] + " -> " + ordered_call_list[n][1]
+        msg = ordered_call_list[n][0] + "\n\t-> " + ordered_call_list[n][1]
         print color(msg, ordered_call_list[n][2])
