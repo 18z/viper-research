@@ -1,6 +1,6 @@
 from colors import color
 
-module_list = []
+ref_list = []
 ordered_list = []
 
 with open("d.txt") as f:
@@ -8,19 +8,19 @@ with open("d.txt") as f:
         nline = line.strip('\n').split(',')
         caller = nline[0]
         callee = nline[1].strip()
-        module_list.append([caller, callee])
+        ref_list.append([caller, callee])
 
 
 # print module_list
 
 
 def dive(i):
-    root_caller = module_list[i][0].replace("'", "")
-    root_callee = module_list[i][1].replace("'", "")
+    root_caller = ref_list[i][0].replace("'", "")
+    root_callee = ref_list[i][1].replace("'", "")
 
     counter = 0
 
-    for item in module_list:
+    for item in ref_list:
         ref_caller = item[0].replace("'", "")
         ref_callee = item[1].replace("'", "")
 
