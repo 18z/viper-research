@@ -15,7 +15,7 @@ with open("d.txt") as f:
 
 
 def dive(i):
-    root_caller = ref_list[i][0].replace("'", "")
+    # root_caller = ref_list[i][0].replace("'", "")
     root_callee = ref_list[i][1].replace("'", "")
 
     counter = 0
@@ -72,15 +72,15 @@ for n in range(0, ordered_list_len):
     callee = ordered_list[n][1]
     previous_2_callee = ordered_list[n-2][1]
 
-    connection = "\t\t\t-> " + callee
-    packages = "\t\t" + caller + "\n\t\t\t-> " + callee
-    another_dep_found = "\t\t\t[d] " + caller + "\n\t\t\t-> " + callee
-    normal = caller + "\n\t-> " + callee
+    connection = '\t\t\t-> {}'.format(callee)
+    packages = '\t\t[p][m]{} \n\t\t\t-> {}'.format(caller, callee)
+    another_dep_found = '\t\t\t[d]{}\n\t\t\t->{}'.format(caller, callee)
+    normal = '[r]{}\n\t-> {}'.format(caller, callee)
 
     if color_code == connection_found:
         print color(connection, color_code)
     elif color_code == packages_found:
-        print " o " + color(packages, color_code)
+        print color(packages, color_code)
     else:
         # look for other dependencies in the same module
         # in viper, same module appears at previous 2 callee
