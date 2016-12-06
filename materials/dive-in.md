@@ -21,3 +21,13 @@
 * [x] [console.py](https://github.com/18z/viper-research/blob/master/materials/console-dive-in.md)
 
 viper.py
+
+strings.py
+
+virustotal.py
+
+yarascan.py
+
+fuzzy.py
+
+pe.py
