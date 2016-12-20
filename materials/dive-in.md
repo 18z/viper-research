@@ -20,7 +20,7 @@
 
 * [x] [console.py](https://github.com/18z/viper-research/blob/master/materials/console-dive-in.md)
 
-viper.py
+* [x] [viper.py](https://github.com/18z/viper-research/blob/master/materials/viper-dive-in.md)
 
 * [x] [strings.py](https://github.com/18z/viper-research/blob/master/materials/strings-dive-in.md)
 
