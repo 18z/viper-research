@@ -24,7 +24,7 @@
 
 * [x] [strings.py](https://github.com/18z/viper-research/blob/master/materials/strings-dive-in.md)
 
-virustotal.py
+* [x] [virustotal.py](https://github.com/18z/viper-research/blob/master/materials/virustotal-dive-in.md)
 
 yarascan.py
 
