@@ -22,12 +22,12 @@
 
 viper.py
 
-strings.py
+* [x] [strings.py](https://github.com/18z/viper-research/blob/master/materials/strings-dive-in.md)
 
 virustotal.py
 
 yarascan.py
 
-fuzzy.py
+* [x] [fuzzy.py](https://github.com/18z/viper-research/blob/master/materials/fuzzy-dive-in.md)
 
 pe.py
