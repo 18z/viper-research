@@ -26,7 +26,7 @@
 
 * [x] [virustotal.py](https://github.com/18z/viper-research/blob/master/materials/virustotal-dive-in.md)
 
-yarascan.py
+* [x] [yarascan.py](https://github.com/18z/viper-research/blob/master/materials/yarascan-dive-in.md)
 
 * [x] [fuzzy.py](https://github.com/18z/viper-research/blob/master/materials/fuzzy-dive-in.md)
 
