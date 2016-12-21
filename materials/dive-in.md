@@ -30,4 +30,4 @@
 
 * [x] [fuzzy.py](https://github.com/18z/viper-research/blob/master/materials/fuzzy-dive-in.md)
 
-* [x] [pe.py](https://github.com/18z/viper-research/blob/master/materials/fuzzy-dive-in.md)
+* [x] [pe.py](https://github.com/18z/viper-research/blob/master/materials/pe-dive-in.md)
