@@ -7,7 +7,7 @@
 |   3   | [db25c](https://github.com/viper-framework/viper/tree/db25c) | Added .gitignore    | 新增 .gitignore 檔案        |
 |   4   | [6f2d2](https://github.com/viper-framework/viper/tree/6f2d2) | Started README file | 在 README.md 上撰寫軟體概念以及使用範例。        |
 |   5   | [f3682](https://github.com/viper-framework/viper/tree/f3682) | Fixed typo          | 修正 plugins.py 註解中錯字。        |
-|   6   | [6b6da](https://github.com/viper-framework/viper/tree/6b6da) | Added URL download (also through Tor) | 增加下載功能 |  |
+|   6   | [6b6da](https://github.com/viper-framework/viper/tree/6b6da) | Added URL download (also through Tor) | 增加下載功能 | [note](https://github.com/18z/viper-research/tree/master/materials/6-6b6da) |
 ### 46a2a
 
     1. 依據原本 viper 程式結構 rewrite 一版。
