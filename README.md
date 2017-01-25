@@ -13,6 +13,7 @@
 |   9   | [556e2] | Fixed usage messages | 新增 pe.py 及修改 commands.py 內 usage message |
 |  10   | [2a893] | Filtered fuzzy compare output | 限制 ssdeep 相似分數四十以上才列出 
 |  11   | [157d3] | Removed name row from info command | 將檔名從 info 指令列出的資本資訊中移除 
+|  12   | [97b1f] | Added import of directory | cmd_store 可批次將資料夾下所有樣本存入 |
 
 [0d9ae]:https://github.com/viper-framework/viper/tree/0d9ae
 [46a2a]:https://github.com/viper-framework/viper/tree/46a2a
@@ -25,6 +26,7 @@
 [556e2]:https://github.com/viper-framework/viper/tree/556e2
 [2a893]:https://github.com/viper-framework/viper/tree/2a893
 [157d3]:https://github.com/viper-framework/viper/tree/157d3
+[97b1f]:https://github.com/viper-framework/viper/tree/97b1f
 
 [此 commit 可出現程式架構與部分功能。]:https://github.com/18z/viper-trace
 
