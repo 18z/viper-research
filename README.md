@@ -28,7 +28,7 @@
 [157d3]:https://github.com/viper-framework/viper/tree/157d3
 [97b1f]:https://github.com/viper-framework/viper/tree/97b1f
 
-[此 commit 可出現程式架構與部分功能。]:https://github.com/18z/viper-trace
+[此 commit 出現程式架構與部分功能。]:https://github.com/18z/viper-trace
 
 [note2]:https://github.com/18z/viper-research/tree/master/materials/2-46a2a
 [note6]:https://github.com/18z/viper-research/tree/master/materials/6-6b6da
