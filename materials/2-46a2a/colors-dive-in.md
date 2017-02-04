@@ -8,8 +8,8 @@
 此程式客製化輸出訊息之顏色，讓 programmer 易操控輸出字串之顏色。
 若欲印出綠色字串，則可使用 green() function。
 
-green() function，input 為 text，即欲印出之字串。
-呼叫後，green() 回傳 color(text, 32)。
+green(input 為 text，即欲印出之字串)
+    回傳 color(text, 32)。
 
 回傳時 color() function 被呼叫。
 function 執行後，會先用 sys.platform 檢查系統是否為 win32，
