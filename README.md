@@ -3,7 +3,7 @@
 | index |  hash |       message       | summary | note |
 |:-----:|:-----:|:-------------------:|:-------:|:----:|
 |   1   | [0d9ae] | Initial commit      | 新增 BSD-3-Clause License。        |
-|   2   | [46a2a] | First commit        | [此 commit 可出現程式架構與部分功能。]| [note2] |
+|   2   | [46a2a] | First commit        | [此 commit 出現程式架構與部分功能。]| [note2] |
 |   3   | [db25c] | Added .gitignore    | 新增 .gitignore 檔案        |
 |   4   | [6f2d2] | Started README file | 在 README.md 上撰寫軟體概念以及使用範例。        |
 |   5   | [f3682] | Fixed typo          | 修正 plugins.py 註解中錯字。        |
