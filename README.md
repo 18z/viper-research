@@ -7,13 +7,14 @@
 |   3   | [db25c] | Added .gitignore    | 新增 .gitignore 檔案        |
 |   4   | [6f2d2] | Started README file | 在 README.md 上撰寫軟體概念以及使用範例。        |
 |   5   | [f3682] | Fixed typo          | 修正 plugins.py 註解中錯字。        |
-|   6   | [6b6da] | Added URL download (also through Tor) | 增加下載功能 | [note6] |
-|   7   | [fbd74] | Added option to delete original file when storing it locally | 檔案存入資料庫時將原檔刪除 | [note7] |
-|   8   | [a68b9] | Fixed help message on store command | getopt 忘了加上 help 參數 |
-|   9   | [556e2] | Fixed usage messages | 新增 pe.py 及修改 commands.py 內 usage message |
-|  10   | [2a893] | Filtered fuzzy compare output | 限制 ssdeep 相似分數四十以上才列出 
-|  11   | [157d3] | Removed name row from info command | 將檔名從 info 指令列出的資本資訊中移除 
-|  12   | [97b1f] | Added import of directory | cmd_store 可批次將資料夾下所有樣本存入 | [note12] |
+|   6   | [3d7f5] | Fixed help message for PE module | 修改 PE 模組中 help 訊息 |
+|   7   | [6b6da] | Added URL download (also through Tor) | 增加下載功能 | [note6] |
+|   8   | [fbd74] | Added option to delete original file when storing it locally | 檔案存入資料庫時將原檔刪除 | [note7] |
+|   9   | [a68b9] | Fixed help message on store command | getopt 忘了加上 help 參數 |
+|  10   | [556e2] | Fixed usage messages | 新增 pe.py 及修改 commands.py 內 usage message |
+|  11   | [2a893] | Filtered fuzzy compare output | 限制 ssdeep 相似分數四十以上才列出 
+|  12   | [157d3] | Removed name row from info command | 將檔名從 info 指令列出的資本資訊中移除 
+|  13   | [97b1f] | Added import of directory | cmd_store 可批次將資料夾下所有樣本存入 | [note12] |
 
 [0d9ae]:https://github.com/viper-framework/viper/tree/0d9ae
 [46a2a]:https://github.com/viper-framework/viper/tree/46a2a
