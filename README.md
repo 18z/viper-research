@@ -17,7 +17,11 @@
 |  13   | [97b1f] | Added import of directory | cmd_store 可批次將資料夾下所有樣本存入 | [note12] |
 |  14   | [6df0f] | Added tags and cleaned up store() function | 重構 store 指令及加入 tag 功能 | [note14] |
 |  15   | [c31aa] | License notation | 宣告版權 | 
+|  16   | [0f51d] | Fixed requirements | 調整使用模組 |
+|  17   | [738b4] | Added socksipy | 使用 socksipy 模組 |
+|  18   | [eb60d] | Grammar yo | 修正 README.md 上文法錯誤 |
 
+[eb60d]:https://github.com/viper-framework/viper/tree/eb60d
 [0d9ae]:https://github.com/viper-framework/viper/tree/0d9ae
 [46a2a]:https://github.com/viper-framework/viper/tree/46a2a
 [db25c]:https://github.com/viper-framework/viper/tree/db25c
@@ -33,6 +37,8 @@
 [3d7f5]:https://github.com/viper-framework/viper/tree/3d7f5
 [6df0f]:https://github.com/viper-framework/viper/tree/6df0f
 [c31aa]:https://github.com/viper-framework/viper/tree/c31aa
+[0f51d]:https://github.com/viper-framework/viper/tree/0f51d
+[738b4]:https://github.com/viper-framework/viper/tree/738b4
 
 [此 commit 出現程式架構與部分功能。]:https://github.com/18z/viper-trace
 
