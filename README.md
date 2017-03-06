@@ -15,7 +15,7 @@
 |  11   | [2a893] | Filtered fuzzy compare output | 限制 ssdeep 相似分數四十以上才列出 
 |  12   | [157d3] | Removed name row from info command | 將檔名從 info 指令列出的資本資訊中移除 
 |  13   | [97b1f] | Added import of directory | cmd_store 可批次將資料夾下所有樣本存入 | [note12] |
-|  14   | [6df0f] | Added tags and cleaned up store() function | 重構 store 指令及加入 tag 功能 |
+|  14   | [6df0f] | Added tags and cleaned up store() function | 重構 store 指令及加入 tag 功能 | [note14] |
 
 [0d9ae]:https://github.com/viper-framework/viper/tree/0d9ae
 [46a2a]:https://github.com/viper-framework/viper/tree/46a2a
@@ -38,3 +38,4 @@
 [note6]:https://github.com/18z/viper-research/tree/master/materials/6-6b6da
 [note7]:https://github.com/18z/viper-research/tree/master/materials/7-fbd74
 [note12]:https://github.com/18z/viper-research/tree/master/materials/12-97b1f
+[note14]:https://github.com/18z/viper-research/tree/master/materials/14-6df0f
